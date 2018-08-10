@@ -1,5 +1,10 @@
 #include "AcceleratedLED328.h"
 
+/*
+ * Connect SCLK, MISO, MOSI, and CSB of ADXL362 to
+ * SCLK, MISO, MOSI, and DP 10 of Arduino
+ */
+
 AcceleratedLED328::AcceleratedLED328(){
 }
 

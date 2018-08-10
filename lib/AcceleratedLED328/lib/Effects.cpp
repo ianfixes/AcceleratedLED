@@ -5,9 +5,15 @@ Effects::Effects(){
   lastRun = 0;
 }
 
+#define L_DO 6
+#define L_BO 7
+
+#define R_DO 4
+#define R_BO 5
+
 void Effects::init(){
-  leftStrip.init(1, 2);
-  rightStrip.init(3, 4);
+  leftStrip.init(L_DO, L_BO);
+  rightStrip.init(R_DO, L_BO);
 
   effect = &noEffect;
 }

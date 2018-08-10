@@ -1,7 +1,7 @@
 #include "Blinkers.h"
 #include "Arduino.h"
 
-const uint8_t LEFT_BLINKER_PIN = 1;
+const uint8_t LEFT_BLINKER_PIN = 3;
 const uint8_t RIGHT_BLINKER_PIN = 2;
 
 Blinkers::Blinkers(){

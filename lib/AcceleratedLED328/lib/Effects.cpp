@@ -13,7 +13,7 @@ Effects::Effects(){
 
 void Effects::init(){
   leftStrip.init(L_DO, L_BO);
-  rightStrip.init(R_DO, L_BO);
+  rightStrip.init(R_DO, R_BO);
 
   effect = &noEffect;
 }

@@ -2,7 +2,7 @@
 
 
 Strobe::Strobe(){
-  durration = 200;
+  durration = 500;
   isOn = false;
 }
 

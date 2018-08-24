@@ -2,6 +2,7 @@
 #define EFFECTS_H
 
 #include "Effect.h"
+#include "NoEffect.h"
 #include "Strobe.h"
 
 const uint8_t UPDATE_DURRATION = 5;
@@ -19,7 +20,7 @@ class Effects{
     Strip rightStrip;
 
     Effect* effect;
-    Effect noEffect;
+    NoEffect noEffect;
     Strobe strobe;
 
     bool blinkerOrEffect(Strip &strip, Data &data, bool blink);

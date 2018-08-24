@@ -6,7 +6,7 @@
 #include "Data.h"
 #include <ADXL362.h>
 
-#define PRINT_ACCELEROMETER
+//#define PRINT_ACCELEROMETER
 
 class AcceleratedLED328{
   public:

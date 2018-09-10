@@ -1,5 +1,5 @@
 # AcceleratedLED
-Controlls LEDs using input from Accelerometer
+Controls LEDs using input from Accelerometer
 
 # Setup
 

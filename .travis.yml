@@ -1,0 +1,39 @@
+sudo: false
+language: ruby
+
+# skip install step since we do it ourselves
+install: true
+
+# config for OSX, if desired
+# os:
+#   - osx
+# # (osx lib dir needs to be created at
+# #   /Users/travis/Documents/Arduino/libraries )
+
+# Explicit config for linux, which is the default
+# os:
+#   - linux
+# # (linux lib dir needs to be created at
+# #   /home/travis/Arduino/libraries )
+
+
+os:
+  - osx
+
+script:
+  # switch to directory of Arduino library
+  - cd lib/AcceleratedLED328
+  - bundle install
+
+  # use the script to install Arduino executable
+  - bundle exec ensure_arduino_installation.rb
+
+  # manually download some Arduino libraries to get specific versions
+  - mkdir -p /Users/travis/Documents/Arduino/libraries
+  - pushd /Users/travis/Documents/Arduino/libraries
+  - git clone https://github.com/adafruit/Adafruit-WS2801-Library.git Adafruit_WS2801
+  - git clone https://github.com/annem/ADXL362.git
+  - popd
+
+  # run the CI script using the custom 3rd party libs
+  - bundle exec arduino_ci_remote.rb

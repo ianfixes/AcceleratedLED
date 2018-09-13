@@ -1,0 +1,3 @@
+# ignore unit test artifacts
+*.cpp.bin
+*.cpp.bin.dSYM
